@@ -79,9 +79,7 @@ ext {
     supportTestRuleVersion = '1.1.1'
     v4Version = '1.0.0'
     junitExtVersion = '1.1.0'
-    mockitoVersion = '2.10.0'
-    junitExtVersion = '1.1.0'
-    robolectricVersion = '4.0.2'
+    mockitoVersion='2.13.0'
 
 
 /**
@@ -128,7 +126,7 @@ ext {
     junitExtTestRunner = "androidx.test.ext:junit:$junitExtVersion"
 
     espresso = "androidx.test.espresso:espresso-core:$espressoVersion"
-    robolectric = "org.robolectric:robolectric:$robolectricVersion"
+
     mockitoTest = "org.mockito:mockito-core:$mockitoVersion"
     /*Constraint layout
     */

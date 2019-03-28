@@ -35,7 +35,7 @@ dependencies {
     androidTestImplementation rootProject.ext.espresso
     androidTestImplementation rootProject.ext.supportTestRunner
     androidTestImplementation rootProject.ext.supportTestRule
-    testImplementation rootProject.ext.robolectric
+
     testImplementation rootProject.ext.mockitoTest
 
 
