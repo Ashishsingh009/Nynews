@@ -18,7 +18,7 @@ import androidx.databinding.DataBindingUtil;
 public class NyNewsDetailActivity  extends AppCompatActivity {
 
     private ActivityNyNewsDetailsBinding binding;
-    private ResultsItem newsdetails;
+    private static ResultsItem newsdetails;
     private NyNewsdetailViewModel viewModel;
 
     /**
@@ -29,7 +29,8 @@ public class NyNewsDetailActivity  extends AppCompatActivity {
      */
     public static void startActivity(Activity mActivity, ResultsItem customerListModel) {
         Intent intent = new Intent(mActivity, NyNewsDetailActivity.class);
-        intent.putExtra("NewsDetails", customerListModel);
+//        intent.putExtra("NewsDetails", customerListModel);
+        newsdetails=customerListModel;
         mActivity.startActivity(intent);
     }
 
@@ -58,11 +59,9 @@ public class NyNewsDetailActivity  extends AppCompatActivity {
     }
 
     private void iniView(){
-        if ((ResultsItem) getIntent().getExtras().getSerializable("NewsDetails") != null) {
-            newsdetails = (ResultsItem) getIntent().getExtras().getSerializable("NewsDetails");
             if(newsdetails!=null){
                 binding.setDataItems(newsdetails);
             }
-        }
+
     }
 }

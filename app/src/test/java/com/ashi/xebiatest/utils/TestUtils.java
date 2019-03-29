@@ -19,7 +19,7 @@ public class TestUtils {
         return (T) mGson.fromJson(json, NyResponse.class);
     }
 
-    public static <T> T loadTrackLeadsJson(String path, Gson mGson) {
+    public static <T> T loadggnJson(String path, Gson mGson) {
         mGson = new Gson();
         String json = getFileString(path);
         //noinspection unchecked

@@ -28,12 +28,16 @@
     </com.google.android.material.appbar.AppBarLayout>
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:layout_below="@id/appbar"
+            android:padding="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
             android:layout_height="wrap_content">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/msg_text_secondary"
-                android:text='@{dataItems.title + " Date"+ dataItems.publishedDate}'/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/msg_text_primary"
+                android:text='@{dataItems.title + " \n Date"+ dataItems.publishedDate}'/>
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 </layout>

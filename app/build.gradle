@@ -40,6 +40,9 @@ dependencies {
     androidTestImplementation rootProject.ext.espresso
     androidTestImplementation rootProject.ext.supportTestRunner
     androidTestImplementation rootProject.ext.supportTestRule
+    androidTestImplementation 'androidx.test:runner:' + rootProject.runnerVersion;
+    androidTestImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion;
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:' + rootProject.espressoVersion
 
     testImplementation rootProject.ext.mockitoTest
 

@@ -20,6 +20,11 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * This class holding the data of newslist and show the data in recyclerview.
+ * constructor inputs {context, list<resultitem></> and NyNewsItemClickListner}
+ *
+ */
 public class NyNewsAdapter extends RecyclerView.Adapter<NyNewsAdapter.MyViewHolder> {
     private Context mContext;
     private ArrayList<ResultsItem> dataList;

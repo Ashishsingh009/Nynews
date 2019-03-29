@@ -1,10 +1,13 @@
 package com.ashi.xebiatest.models;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
-public class ResultsItem implements Serializable {
-	private String perFacet;
+public class ResultsItem  {
+	@SerializedName("perFacet")
+	public String perFacet;
 	private int emailCount;
 	private int etaId;
 	private String subsection;
@@ -18,7 +21,9 @@ public class ResultsItem implements Serializable {
 	private String source;
 	private List<MediaItem> media;
 	private String type;
-	private String title;
+
+	@SerializedName("title")
+	public String title;
 	private List<String> desFacet;
 	private String uri;
 	private String url;
@@ -26,7 +31,8 @@ public class ResultsItem implements Serializable {
 	private String geoFacet;
 	private long id;
 	private String byline;
-	private String published_date;
+	@SerializedName("published_date")
+	public String published_date;
 	private String updated;
 
 	public void setPerFacet(String perFacet){

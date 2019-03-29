@@ -14,10 +14,9 @@ import dagger.Component;
 import retrofit2.Retrofit;
 
 /**
- AppComponent class contains the dependency of App module and n/w module.
- Class for Dagger injection. Methods with in the
-interface is Globally access.
-@AUTHOR-ASHISH.SINGH1000012
+ *AppComponent class contains the dependency of App module and n/w module.
+ *  Class for Dagger injection. Methods with in the
+ * interface is Globally access.
  */
 
 

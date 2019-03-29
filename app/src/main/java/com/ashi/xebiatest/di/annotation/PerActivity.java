@@ -7,8 +7,8 @@ import javax.inject.Scope;
 
 /**
  * TO bind the activity at runtime in module.
- * @AUTHOR-ASHISH.SINGH1000012
- * Date-19-11-2018
+ * @AUTHOR-ASHISHSINGH
+ *
  */
 
 @Scope

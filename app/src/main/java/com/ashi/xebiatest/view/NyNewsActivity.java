@@ -119,8 +119,8 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
      */
     private void getToolBar() {
         setSupportActionBar((Toolbar) binding.toolbar);
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeButtonEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getResources().getString(R.string.news_list_titel));
 
     }
@@ -135,5 +135,8 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
     @Override
     public void onItemClick(ResultsItem item) {
         NyNewsDetailActivity.startActivity(this,item);
+    }
+    public int getSize(){
+        return mDataItems.size();
     }
 }

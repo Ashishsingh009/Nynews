@@ -2,14 +2,12 @@ package com.ashi.xebiatest.view;
 
 import com.ashi.xebiatest.models.NyResponse;
 import com.ashi.xebiatest.models.ResultsItem;
-import com.ashi.xebiatest.utils.TestUtils;
 import com.google.gson.Gson;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;

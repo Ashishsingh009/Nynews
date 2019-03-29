@@ -1,19 +1,13 @@
 package com.ashi.xebiatest.viewmodel;
 
-import com.ashi.xebiatest.adapter.NyNewsAdapter;
-import com.ashi.xebiatest.listener.NyNewsItemClickListner;
-import com.ashi.xebiatest.listener.NyNewsListInterface;
 import com.ashi.xebiatest.models.NyResponse;
 import com.ashi.xebiatest.models.ResultsItem;
-import com.ashi.xebiatest.utils.TestUtils;
-import com.ashi.xebiatest.view.NyNewsActivity;
 import com.google.gson.Gson;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;

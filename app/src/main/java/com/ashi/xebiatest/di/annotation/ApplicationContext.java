@@ -7,7 +7,7 @@ import java.lang.annotation.RetentionPolicy;
 import javax.inject.Qualifier;
 /**
  * TO get the Application context at runtime.
- * @author jai.mishra1000006
+ * @author Ashish Singh
  * Date-20-11-2018
  */
 @Qualifier

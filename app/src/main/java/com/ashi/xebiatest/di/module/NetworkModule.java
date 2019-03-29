@@ -22,9 +22,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 /**
-   INM-50
- This class create the OkHttpClient instance and communicate with the WebApi using OkHttp connection.
-   @AUTHOR-ASHISH.SINGH1000012
+ * This class create the OkHttpClient instance and communicate with the WebApi using OkHttp connection.
+ *    @AUTHOR-ASHISH.SINGH
  */
 
 @Module
