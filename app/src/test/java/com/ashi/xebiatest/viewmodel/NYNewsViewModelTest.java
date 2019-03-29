@@ -14,6 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -22,6 +23,7 @@ import static org.junit.Assert.*;
 public class NYNewsViewModelTest {
 
     private NyResponse newsResponse;
+    private List<ResultsItem> resultsItem;
 
 
     @Inject
@@ -30,6 +32,7 @@ public class NYNewsViewModelTest {
     public void setUp() throws Exception {
         newsResponse= new NyResponse();
         newsResponse= TestUtils.loadJson("mock/nyMockListDubai.json",mGson);
+        resultsItem=newsResponse.getResults();
     }
 
     @After
@@ -46,17 +49,18 @@ public class NYNewsViewModelTest {
 
     @Test
     public void getApplication() {
-        NyNewsActivity activity=new NyNewsActivity();
-       // assertTrue(activity.mDataItems.get(0).getTitle()=="Why You Procrastinate (It Has Nothing to Do With Self-Control)");
+        resultsItem.get(0).setAdxKeywords("Test mock data");
+        assertFalse(resultsItem.get(0).getAdxKeywords().equalsIgnoreCase("Test mock data"));
 
 
     }
     @Test
     public void Error() throws Exception{
-//        assertTrue(newsResponse.getStatus().equals("success"));
+        assertFalse(newsResponse.getStatus().equals("fail"));
     }
 
     @Test
     public void onCleared() {
+        assertTrue(newsResponse.getCopyright().equals("Copyright (c) 2019 The New York Times Company.  All Rights Reserved."));
     }
 }

@@ -134,6 +134,6 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
 
     @Override
     public void onItemClick(ResultsItem item) {
-
+        NyNewsDetailActivity.startActivity(this,item);
     }
 }

@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:onClick="@{() -> itemclicklistner.onItemClick(dataItem)}"
             android:orientation="vertical"
             android:paddingLeft="72dp"
             android:paddingRight="@dimen/padding_list_row">
@@ -135,8 +136,8 @@
         android:tint="@color/icon_tint_normal" />
         <ImageView
             android:id="@+id/icon_right_arrow"
-            android:layout_width="@dimen/icon_star"
-            android:layout_height="@dimen/icon_star"
+            android:layout_width="@dimen/icon_back"
+            android:layout_height="@dimen/icon_back"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_toLeftOf="@+id/timestamp"
