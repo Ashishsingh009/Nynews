@@ -20,19 +20,20 @@ Android Studio3.2 or above
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+
 
 ```
-Give the example
+Checkout The code with Gitlink in android Studio.
+file->new->open from versioncontrol->git
 ```
 
-And repeat
+And Build
 
 ```
-until finished
+Build the project.
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+
 
 ##  Test
 
@@ -45,6 +46,7 @@ Test Cases for the NyNewsActivity class and adaptor.
 
 ## Authors
 
+* **Ashish Singh** - *Complete work* - [AshishSingh](https://github.com/Ashishsingh009)
 * **Ashish Singh** - *Complete work* - [AshishSingh](https://github.com/Ashishsingh009)
 
 
