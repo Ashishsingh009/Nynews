@@ -1,6 +1,6 @@
-# Project Title
+# Ny News
 
-Ny News
+Getting the feeds form ny server using Restful Api.
 
 ## Getting Started
 
@@ -46,8 +46,10 @@ Build the project.
 Test Cases for the NyNewsActivity class and adaptor.
 
  
+### Sonarqube report
 
- 
+ (https://drive.google.com/file/d/1J2nEBO45PvmFYR9eqKVqdUXALVszeske/view?usp=sharing)
+ (https://drive.google.com/file/d/1nEsvK027fTEFVL5Bl3mOULk6ZK6i6eX3/view?usp=sharing) 
 
 
 ## Authors

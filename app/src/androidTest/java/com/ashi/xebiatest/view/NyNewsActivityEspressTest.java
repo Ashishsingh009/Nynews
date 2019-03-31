@@ -1,12 +1,27 @@
 package com.ashi.xebiatest.view;
 
+import com.ashi.xebiatest.R;
+
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import androidx.test.espresso.Espresso;
+import androidx.test.espresso.contrib.RecyclerViewActions;
+import androidx.test.espresso.matcher.ViewMatchers;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
+import androidx.test.runner.AndroidJUnit4;
 
+@RunWith(AndroidJUnit4.class)
+@LargeTest
 public class NyNewsActivityEspressTest {
+
+    @Rule
+    public ActivityTestRule<NyNewsActivity> activityRule
+            = new ActivityTestRule<>(NyNewsActivity.class);
 
     @Before
     public void setUp() throws Exception {
@@ -19,6 +34,7 @@ public class NyNewsActivityEspressTest {
     @Test
     public void onCreate() {
 
+        Espresso.onView(ViewMatchers.withId(R.id.recyclerView)).perform(RecyclerViewActions.scrollToPosition(3));
     }
 
     @Test

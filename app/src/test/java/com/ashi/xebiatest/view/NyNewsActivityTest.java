@@ -1,30 +1,36 @@
 package com.ashi.xebiatest.view;
 
 import com.ashi.xebiatest.models.NyResponse;
-import com.ashi.xebiatest.models.ResultsItem;
+import com.ashi.xebiatest.utils.TestUtils;
 import com.google.gson.Gson;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.List;
+import org.mockito.Mockito;
 
 import javax.inject.Inject;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class NyNewsActivityTest {
     private NyResponse newsResponse;
-    List<ResultsItem> mDataItems;
+
 
     @Inject
     Gson mGson;
+
+    NyNewsActivity activity;
+
     @Before
     public void setUp() throws Exception {
         newsResponse= new NyResponse();
+        activity = Mockito.spy(new NyNewsActivity());
         newsResponse= TestUtils.loadJson("mock/nyMockListGgn.json",mGson);
-        mDataItems=newsResponse.getResults();
+        activity.mDataItems=newsResponse.getResults();
+
+
+
     }
 
     @After
@@ -32,7 +38,12 @@ public class NyNewsActivityTest {
 
 
     }
-
+//@Test
+//public void onCreate(){
+////    activity.onCreate(Mockito.mock(Bundle.class));
+//
+//    Mockito.verify(activity).onCreate(Mockito.mock(Bundle.class));
+//}
     @Test
     public void onRefresh() {
 //        assertTrue(mDataItems.contains(""));
@@ -44,5 +55,11 @@ public class NyNewsActivityTest {
 
     @Test
     public void onItemClick() {
+
+    }
+    @Test
+    public void getSize(){
+
+        assertTrue(activity.mDataItems.size()>0);
     }
 }

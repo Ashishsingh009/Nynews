@@ -1,12 +1,9 @@
 package com.ashi.xebiatest.models;
 
-import com.google.gson.annotations.SerializedName;
-
-import java.io.Serializable;
 import java.util.List;
 
 public class ResultsItem  {
-	@SerializedName("perFacet")
+
 	public String perFacet;
 	private int emailCount;
 	private int etaId;
@@ -22,7 +19,7 @@ public class ResultsItem  {
 	private List<MediaItem> media;
 	private String type;
 
-	@SerializedName("title")
+
 	public String title;
 	private List<String> desFacet;
 	private String uri;
@@ -31,7 +28,7 @@ public class ResultsItem  {
 	private String geoFacet;
 	private long id;
 	private String byline;
-	@SerializedName("published_date")
+
 	public String published_date;
 	private String updated;
 

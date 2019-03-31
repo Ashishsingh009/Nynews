@@ -4,14 +4,20 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
         
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
-        
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
+
+
+
 }
 
 allprojects {
@@ -21,6 +27,7 @@ allprojects {
         
     }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
@@ -63,7 +70,7 @@ ext {
     gsonConverterVersion = '2.4.0'
     okhttpinterceptorVersion = '3.8.0'
     okhttpVersion = '3.4.1'
-
+    dexMakerVersion = '1.4'
 
     rxBindingVersion = '0.4.0'
     parcelerApiVersion = '1.0.4'

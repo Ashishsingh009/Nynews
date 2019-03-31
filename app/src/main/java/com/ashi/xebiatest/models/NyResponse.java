@@ -1,10 +1,11 @@
 package com.ashi.xebiatest.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NyResponse {
 	private String copyright;
-	private List<ResultsItem> results;
+	private ArrayList<ResultsItem> results;
 	private int numResults;
 	private String status;
 
@@ -16,11 +17,11 @@ public class NyResponse {
 		return copyright;
 	}
 
-	public void setResults(List<ResultsItem> results){
+	public void setResults(ArrayList<ResultsItem> results){
 		this.results = results;
 	}
 
-	public List<ResultsItem> getResults(){
+	public ArrayList<ResultsItem> getResults(){
 		return results;
 	}
 

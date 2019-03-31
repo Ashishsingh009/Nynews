@@ -3,7 +3,6 @@ package com.ashi.xebiatest.view;
 
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import com.ashi.xebiatest.R;
@@ -17,7 +16,6 @@ import com.ashi.xebiatest.utils.DividerItemDecoration;
 import com.ashi.xebiatest.viewmodel.NYNewsViewModel;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,6 +25,11 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+/**
+ * This class is base class for the app. Connect to the server through the API.
+ * @param
+ */
 
 public class NyNewsActivity extends AppCompatActivity implements NyNewsListInterface, NyNewsItemClickListner {
 
@@ -60,7 +63,7 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
     }
 
     /**
-     * Method to set observers on data managed by {@link } class
+     * Method to set observers on data managed by nyNewsViewModel class
      * for this activity.
      */
     private void attachObservers() {
@@ -90,7 +93,7 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
             @Override
             public void onChanged(NyResponse response) {
                 if (response!=null){
-                    if (response.getResults().size()>0){
+                    if (!response.getResults().isEmpty()&&response.getResults().size()>0){
                         mDataItems= new ArrayList<>();
                         mDataItems.clear();
                         mDataItems.addAll(response.getResults());
@@ -106,7 +109,7 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
      * for this activity.
      */
     private void iniView() {
-        adapter= new NyNewsAdapter(NyNewsActivity.this, new ArrayList<ResultsItem>(),this);
+        adapter= new NyNewsAdapter(new ArrayList<ResultsItem>(),this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         binding.recyclerView.setLayoutManager(mLayoutManager);
         binding.recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -119,8 +122,6 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
      */
     private void getToolBar() {
         setSupportActionBar((Toolbar) binding.toolbar);
-//        getSupportActionBar().setHomeButtonEnabled(true);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle(getResources().getString(R.string.news_list_titel));
 
     }
@@ -136,6 +137,7 @@ public class NyNewsActivity extends AppCompatActivity implements NyNewsListInter
     public void onItemClick(ResultsItem item) {
         NyNewsDetailActivity.startActivity(this,item);
     }
+
     public int getSize(){
         return mDataItems.size();
     }

@@ -1,7 +1,5 @@
 package com.ashi.xebiatest.adapter;
 
-import android.content.Context;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +7,6 @@ import android.view.ViewGroup;
 import com.ashi.xebiatest.BR;
 import com.ashi.xebiatest.R;
 import com.ashi.xebiatest.listener.NyNewsItemClickListner;
-import com.ashi.xebiatest.models.NyResponse;
 import com.ashi.xebiatest.models.ResultsItem;
 
 import java.util.ArrayList;
@@ -26,11 +23,10 @@ import androidx.recyclerview.widget.RecyclerView;
  *
  */
 public class NyNewsAdapter extends RecyclerView.Adapter<NyNewsAdapter.MyViewHolder> {
-    private Context mContext;
+
     private ArrayList<ResultsItem> dataList;
     private NyNewsItemClickListner listner;
-    public NyNewsAdapter(Context context, ArrayList<ResultsItem> data, NyNewsItemClickListner itemClickListner){
-        this.mContext=context;
+    public NyNewsAdapter(ArrayList<ResultsItem> data, NyNewsItemClickListner itemClickListner){
         this.dataList=data;
         this.listner=itemClickListner;
     }

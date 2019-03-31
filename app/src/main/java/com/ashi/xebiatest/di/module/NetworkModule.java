@@ -71,9 +71,5 @@ public class NetworkModule {
         return retrofit;
     }
 
-//    @Provides
-//    @Singleton
-//    ApiSource provideApiSource(Retrofit retrofit) {
-//        return new ApiSourceImpl(retrofit);
-//    }
+
 }

@@ -8,7 +8,6 @@ import android.view.View;
 import com.ashi.xebiatest.R;
 import com.ashi.xebiatest.databinding.ActivityNyNewsDetailsBinding;
 import com.ashi.xebiatest.models.ResultsItem;
-import com.ashi.xebiatest.viewmodel.NyNewsdetailViewModel;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +18,6 @@ public class NyNewsDetailActivity  extends AppCompatActivity {
 
     private ActivityNyNewsDetailsBinding binding;
     private static ResultsItem newsdetails;
-    private NyNewsdetailViewModel viewModel;
 
     /**
      * This method is to open the CustomerDetailsActivity. This method is call from different activity.
@@ -29,7 +27,6 @@ public class NyNewsDetailActivity  extends AppCompatActivity {
      */
     public static void startActivity(Activity mActivity, ResultsItem customerListModel) {
         Intent intent = new Intent(mActivity, NyNewsDetailActivity.class);
-//        intent.putExtra("NewsDetails", customerListModel);
         newsdetails=customerListModel;
         mActivity.startActivity(intent);
     }
