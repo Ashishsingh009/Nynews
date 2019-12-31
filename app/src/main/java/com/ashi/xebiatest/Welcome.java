@@ -5,4 +5,5 @@ public class Welcome  {
     public void doSome(){
 
     }
+    public
 }
