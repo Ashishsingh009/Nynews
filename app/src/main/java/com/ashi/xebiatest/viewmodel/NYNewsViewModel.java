@@ -40,6 +40,7 @@ public class NYNewsViewModel extends AndroidViewModel {
        initializeInjector();
     }
 
+    private  void dcask)
     private void initializeInjector() {
         DaggerNYNewsComponent
                 .builder().appComponent(NyNewsApp.getInstance().getAppComponent())
